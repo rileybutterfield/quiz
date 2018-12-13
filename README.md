@@ -14,7 +14,7 @@ Make sure to check off your items as you complete them. [ ] => [x]
 - [ ] Add, commit, and push your changes
 - [x] Make your site live on gh-pages
 ### index.html
-- [ ] Update the HTML to reflect your three questions. Expected answers to your new questions should be placeholders in your input box.
+- [X] Update the HTML to reflect your three questions. Expected answers to your new questions should be placeholders in your input box.
 ### JS
 - [ ] Using conditional statements, declare a function for each of your questions that returns a number based on the user's input. 
 ### Wrap
