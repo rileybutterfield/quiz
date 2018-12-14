@@ -70,17 +70,17 @@ $(document).ready(function() {
             }
         }
         function lastFunction(score) {
-            if (score <= 2) {
-                return "You are Ritz Bits"
+            if (score <= 6) {
+                return "You are Ritz Bits "+ "<br>" + "<img class ='ritzbits' src = 'http://www.ritzcrackers.com/~/media/ritzcrackers/images/varieties/products/png/480x480/00414cf.png'>";
             }
-             if (score <= 5) {
-                return "You are Goldfish"
+             if (score <= 9) {
+                return "You are Goldfish" + "<br>" + "<img class ='goldfish' src = 'https://images-na.ssl-images-amazon.com/images/I/813ydEtoa9L._SY355_.jpg'>";
             }
-             if (score <= 11) {
-                return "You are CheezIts"
+             if (score <= 12) {
+                return "You are CheezIts" + "<br>" + "<img class ='cheezits' src = 'https://images-na.ssl-images-amazon.com/images/I/813ydEtoa9L._SY355_.jpg'>";
             }
             else {
-                return "You are Cheetos"
+                return "You are Cheetos" + "<br>" + "<img class = 'cheetos' src = 'https://images-na.ssl-images-amazon.com/images/I/81jwERLsCSL._SL1500_.jpg'>";
             }
         }
         
