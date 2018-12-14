@@ -2,15 +2,21 @@
 
 $(document).ready(function() {
     $("button").click(function() {
-        var age = $("#age").val();
+        var ageInput = $("#age").val();
         var cheeseSnack = "TBD";
         var imgSrc = "https://media.giphy.com/media/22zgHX8aop488/giphy.gif";
         var q1Result = $("#question1").val();
         var q2Result = $("#question2").val();
         var cnStaff = $("#question3").val().length;
-        var totalScore = 0
+        var totalScore;
+    var ageScore = ageBox(ageInput)
+    var cheeseScore = cheeseBox(q1Result)
+    var lunchScore = lunchBox(q2Result)
+    var staffScore = staffBox(cnStaff)
+    totalScore = ageScore + cheeseScore + lunchScore + staffScore;
+    $(".result").html(lastFunction(totalScore));
+});
         function ageBox (age) {
-            age = parseInt(age)
             if (age <= 16) {
                 return 1
             }
@@ -46,24 +52,36 @@ $(document).ready(function() {
                 return 2  
             }
             else {
-                return 3
+                return 3;
             }
         }
         function staffBox (cnStaff) {
             if (cnStaff <= 4) {
-                return 1
+                return 1;
             }
             else if (cnStaff <= 6) {
-                return 2  
+                return 2; 
             }
             else if (cnStaff <= 8) {
-                return 3   
+                return 3;  
             }
             else {
-                return 4
+                return 4;
             }
         }
-        console.log(cheeseBox())
-    });
-
+        function lastFunction(score) {
+            if (score <= 2) {
+                return "You are Ritz Bits"
+            }
+             if (score <= 5) {
+                return "You are Goldfish"
+            }
+             if (score <= 11) {
+                return "You are CheezIts"
+            }
+            else {
+                return "You are Cheetos"
+            }
+        }
+        
 });
